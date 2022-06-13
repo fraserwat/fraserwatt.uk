@@ -1,0 +1,21 @@
+.biog-contact {
+    display: grid;
+    gap: get-size('900');
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+.biog-contact > * {
+    margin-inline: auto;
+}
+.biog-contact > article,
+.biog-contact__sub-box > * {
+    padding: get-size('500');
+}
+
+.biog-contact__sub-box {
+    padding: 0;
+    gap: get-size('900');
+    flex-direction: column;
+}
+.biog-contact__sub-box aside {
+    text-align: center;
+}

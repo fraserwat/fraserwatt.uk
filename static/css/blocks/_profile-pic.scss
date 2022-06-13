@@ -1,0 +1,17 @@
+@media screen and (max-width: $breakpoint) {
+    .profile-pic {
+        max-width: 45vw;
+    }
+}
+.profile-pic-container {
+    display: flex;
+    width: 100%;
+}
+.profile-pic {
+    border: 8px solid get-color('blue');
+    height: auto;
+    margin: auto;
+}
+    .profile-pic {
+        transform: scaleX(-1);
+    }

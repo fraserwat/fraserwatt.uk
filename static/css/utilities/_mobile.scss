@@ -1,0 +1,10 @@
+@media screen and (max-width: $breakpoint) {
+    .mobile-on {
+        display: none;
+    }
+}
+@media screen and (min-width: $breakpoint) {
+    .mobile-off {
+        display: none;
+    }
+}

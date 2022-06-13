@@ -1,0 +1,37 @@
+$breakpoint: 650px;
+
+@import "reset";
+@import "config";
+@import '../../node_modules/gorko/gorko.scss';
+
+// BLOCKS
+@import "blocks/biog-contact";
+@import "blocks/contact-form";
+@import "blocks/greeting";
+@import "blocks/button";
+@import "blocks/profile-pic";
+@import "blocks/fraser";
+@import "blocks/maintext";
+@import "blocks/hamburger";
+
+// UTILITIES
+@import "utilities/max-width";
+@import "utilities/rad";
+@import "utilities/flow";
+@import "utilities/space-between";
+@import "utilities/mobile";
+@import "utilities/shadow";
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:500,700);
+
+// GLOBAL STYLES
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: get-color('gradient');
+    background-attachment: fixed;
+    padding: get-size('500');
+}
+p {
+    letter-spacing: 0.2px;
+}

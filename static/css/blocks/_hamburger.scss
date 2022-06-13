@@ -1,0 +1,10 @@
+.hamburger {
+    background-color: rgba($color: #000000, $alpha: 0);
+    background-image: url('/images/hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 2rem;
+    width: 2rem;
+    margin-block: auto;
+}
