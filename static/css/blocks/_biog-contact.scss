@@ -2,6 +2,9 @@
     display: grid;
     gap: get-size('900');
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    @media (max-width: 375px) {
+        display: block;
+    }
 }
 .biog-contact > * {
     margin-inline: auto;

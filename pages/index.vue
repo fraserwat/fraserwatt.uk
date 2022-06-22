@@ -1,5 +1,5 @@
 <template>
-  <div class="[ container ] [ max-width-1100 ]">
+  <div id="page-start" class="[ container ] [ max-width-1100 ]">
     <menu-header />
     <main class="pad-bottom-900" >
       <section class="[ greeting ] [ ]">
@@ -12,6 +12,7 @@
       </section>
       <section class="[ biog-contact ] [ ]">
         <article class="[ maintext ] [ bg-white rad-10 flow shadow ]">
+          <h2 class="sr-only">About Me</h2>
           <p>I’ve worked in Data & Analyics for eight years, and as a self-employed contractor since the first half of 2021.</p>
           <p>Using a data-driven approach to enable growth across end-to-end analytics pipelines, I work where the project requires — from ETL and analytics engineering, to visualisation and commercial insights. I’ve had success doing this in both a B2B and B2C context at companies as varied as <b>Paddle</b>, <b>Facebook</b>, and <b>Otrium</b>.</p>
           <p>I also write about the intersection of technology and politics, and have been featured in <b>Tribune</b> and <b>Jacobin</b> magazines.</p>
@@ -19,9 +20,11 @@
         </article>
         <div class="[ biog-contact__sub-box ] [ box-flex ]">
           <aside class="[ ] [ bg-blue color-white rad-10 shadow ]">
+            <h2 class="sr-only">My Availability</h2>
             <p>I am taking Data & Analytics contracts for <b>Q3 2022</b>, and web development work on an adhoc basis.</p>
           </aside>
-          <form action="" class="[ contact-form ] [ bg-white color-navy flow rad-10 box-flex shadow ]">
+          <form id="contact" action="" class="[ contact-form ] [ bg-white color-navy flow rad-10 box-flex shadow ]">
+            <h2 class="sr-only">Contact</h2>
             <input id="form-name" type="text" name="name" placeholder="Your Name">
             <input id="form-email" type="email" name="email" placeholder="Email Address">
             <textarea id="form-message" name="message" placeholder="Your message here"></textarea>
@@ -31,13 +34,16 @@
         </div>
       </section>
     </main>
+    <modal-menu v-show="$store.state.modals.menuModal"/>
   </div>
 </template>
 
 <script>
 import MenuHeader from '~/components/MenuHeader.vue'
+import ModalMenu from '~/components/ModalMenu.vue'
+
 export default {
   name: 'IndexPage',
-  components: { MenuHeader },
+  components: { MenuHeader, ModalMenu },
 }
 </script>

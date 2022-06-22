@@ -7,4 +7,10 @@
     height: 2rem;
     width: 2rem;
     margin-block: auto;
+    transition: .25s ease-in-out;
+}
+.hamburger.active {
+    z-index: 2;
+    background-image: url('/images/close.svg');
+
 }

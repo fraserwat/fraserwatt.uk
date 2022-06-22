@@ -13,6 +13,8 @@ $breakpoint: 650px;
 @import "blocks/fraser";
 @import "blocks/maintext";
 @import "blocks/hamburger";
+@import "blocks/modal-overlay";
+@import "blocks/modal-side";
 
 // UTILITIES
 @import "utilities/max-width";
@@ -21,10 +23,15 @@ $breakpoint: 650px;
 @import "utilities/space-between";
 @import "utilities/mobile";
 @import "utilities/shadow";
+@import "utilities/sr-only";
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:500,700);
 
 // GLOBAL STYLES
+
+html { 
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -34,4 +41,8 @@ body {
 }
 p {
     letter-spacing: 0.2px;
+}
+
+a, button {
+    cursor: pointer;
 }
