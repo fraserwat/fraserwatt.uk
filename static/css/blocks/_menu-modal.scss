@@ -1,0 +1,32 @@
+$slide-speed: .2s;
+
+.menu-modal {
+    z-index: 2;
+    height: 100vh;
+    animation: slideIn $slide-speed ease-in-out;
+    animation-fill-mode: forwards;
+}
+.menu-modal.slide-out {
+    animation: slideOut $slide-speed ease-in-out;
+    animation-fill-mode: forwards;
+}
+.menu-modal a {
+    color: #003141;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+.menu-modal a:not(.pad-0) {
+    padding: 1.5rem;
+    padding-left: 0;
+}
+.menu-modal button {
+    width: 100%;
+    padding-block: get-size('300');
+    box-shadow: 0 4px 0 0 darken(#007EA7, 10%) ;
+    transition: .2s ease-in-out;
+}
+.contact-form button:active {
+    transform: translateY(3px); 
+    box-shadow: 0 1px 0 0 darken(#007EA7, 10%) ;
+}

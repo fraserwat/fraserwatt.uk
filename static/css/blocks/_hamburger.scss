@@ -7,10 +7,12 @@
     height: 2rem;
     width: 2rem;
     margin-block: auto;
-    transition: .25s ease-in-out;
+    transition: .2s ease-in-out;
+    z-index: 3;
+    right: 1.25rem;
+    top: 1.5rem;
+    position: fixed;
 }
 .hamburger.active {
-    z-index: 2;
     background-image: url('/images/close.svg');
-
 }

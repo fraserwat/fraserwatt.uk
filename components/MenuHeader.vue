@@ -1,33 +1,46 @@
 <template>
-    <header ref="header" class="[ box-flex space-between ]">
-        <a href="#page-start" class="mobile-off">
-            <h2 class="[ fraser ] [ color-white text-600 ]">Fraser Watt</h2>
-        </a>
-        <h2 class="[ fraser ] [ mobile-on color-white text-600 ]">FW</h2>
-        <nav class="[ menu ] [ mobile-off ]">
-            <ul class="box-flex">
-                <li><a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="#contact"><button class="button">Contact</button></a></li>
-            </ul>
-        </nav>
-        <button id="hamburger" class="[ hamburger ] [ mobile-on ]" @click="toggleHamburgerMenu"></button>
-    </header>
+    <div ref="header" class="header-container">
+        <header class="[ header ] [ box-flex space-between ]">
+            <a href="#page-start" class="mobile-off">
+                <h2 class="[ fraser ] [ color-white text-600 ]">Fraser Watt</h2>
+            </a>
+            <h2 class="[ fraser ] [ mobile-on color-white text-600 ]">FW</h2>
+            <nav class="[ menu ] [ mobile-off ]">
+                <ul class="box-flex">
+                    <li><a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="#contact"><button class="button">Contact</button></a></li>
+                </ul>
+            </nav>
+        </header>
+        <button id="hamburger" :class="`[ hamburger ] [ ${modals.menuModal ? 'active' : ''} ] [ mobile-on bg-off-white ]`" @click="toggleHamburgerMenu"></button>
+    </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 export default {
     name: "MenuHeader",
+    computed: {
+        ...mapState(['modals', 'hamburger', 'activeModal', 'activeOverlay']),
+    },
     methods: {
-        ...mapActions(['changeModalState']),
+        ...mapActions(['changeModalState', 'saveHamburgerState']),
         toggleHamburgerMenu() {
-            const currentHamburgerState = this.$store.state.modals.menuModal;
-            this.$refs.header.classList.toggle('z-index-2');
-            this.$refs.header.querySelector('.hamburger').classList.toggle('active');
-            this.changeModalState({modalName: 'menuModal', newState: !currentHamburgerState});
-            console.log(this.$store.state.modals.menuModal)
+            this.saveHamburgerState(this.$refs.header.querySelector('#hamburger'));
+            if (this.hamburger.classList.contains('active')) {
+                this.activeOverlay.classList.add('fade-out');
+                this.activeModal.classList.add('slide-out');
+                this.hamburger.classList.remove('active')
+                setTimeout(() => {
+                    this.changeModalState({modalName: 'menuModal', newState: !this.modals.menuModal});
+                    this.activeOverlay.classList.remove('fade-out');
+                    this.activeModal.classList.remove('slide-out');
+                }, 200)
+            } else {
+                this.changeModalState({modalName: 'menuModal', newState: !this.modals.menuModal});
+            }
         }
     }
 }
@@ -45,12 +58,6 @@ export default {
         font-weight: bold;
         text-transform: uppercase;
         text-decoration: none;
-    }
-    .button {
-        border-radius: 8px;
-        padding: .5rem 1rem;
-        transition: .2s ease-in-out;
-        background-color: #F3F3F3FF;
     }
     .button:hover {
         color: #F3F3F3;

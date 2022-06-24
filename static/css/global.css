@@ -136,6 +136,10 @@ li, ul {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.gap-0 {
+  margin: 0rem;
+}
+
 .gap-300 {
   margin: 0.8rem;
 }
@@ -158,6 +162,10 @@ li, ul {
 
 .gap-900 {
   margin: 3rem;
+}
+
+.gap-top-0 {
+  margin-top: 0rem;
 }
 
 .gap-top-300 {
@@ -184,6 +192,10 @@ li, ul {
   margin-top: 3rem;
 }
 
+.gap-right-0 {
+  margin-right: 0rem;
+}
+
 .gap-right-300 {
   margin-right: 0.8rem;
 }
@@ -206,6 +218,10 @@ li, ul {
 
 .gap-right-900 {
   margin-right: 3rem;
+}
+
+.gap-bottom-0 {
+  margin-bottom: 0rem;
 }
 
 .gap-bottom-300 {
@@ -232,6 +248,10 @@ li, ul {
   margin-bottom: 3rem;
 }
 
+.gap-left-0 {
+  margin-left: 0rem;
+}
+
 .gap-left-300 {
   margin-left: 0.8rem;
 }
@@ -254,6 +274,10 @@ li, ul {
 
 .gap-left-900 {
   margin-left: 3rem;
+}
+
+.pad-0 {
+  padding: 0rem;
 }
 
 .pad-300 {
@@ -280,6 +304,10 @@ li, ul {
   padding: 3rem;
 }
 
+.pad-top-0 {
+  padding-top: 0rem;
+}
+
 .pad-top-300 {
   padding-top: 0.8rem;
 }
@@ -302,6 +330,10 @@ li, ul {
 
 .pad-top-900 {
   padding-top: 3rem;
+}
+
+.pad-right-0 {
+  padding-right: 0rem;
 }
 
 .pad-right-300 {
@@ -328,6 +360,10 @@ li, ul {
   padding-right: 3rem;
 }
 
+.pad-bottom-0 {
+  padding-bottom: 0rem;
+}
+
 .pad-bottom-300 {
   padding-bottom: 0.8rem;
 }
@@ -350,6 +386,10 @@ li, ul {
 
 .pad-bottom-900 {
   padding-bottom: 3rem;
+}
+
+.pad-left-0 {
+  padding-left: 0rem;
 }
 
 .pad-left-300 {
@@ -394,6 +434,10 @@ li, ul {
 
 .stack-700 {
   z-index: 40;
+}
+
+.text-0 {
+  font-size: 0rem;
 }
 
 .text-300 {
@@ -471,6 +515,9 @@ li, ul {
   .sm\:box-show {
     display: inherit;
   }
+  .sm\:text-0 {
+    font-size: 0rem;
+  }
   .sm\:text-300 {
     font-size: 0.8rem;
   }
@@ -522,6 +569,9 @@ li, ul {
   .md\:box-show {
     display: inherit;
   }
+  .md\:text-0 {
+    font-size: 0rem;
+  }
   .md\:text-300 {
     font-size: 0.8rem;
   }
@@ -572,6 +622,9 @@ li, ul {
   }
   .lg\:box-show {
     display: inherit;
+  }
+  .lg\:text-0 {
+    font-size: 0rem;
   }
   .lg\:text-300 {
     font-size: 0.8rem;
@@ -710,7 +763,8 @@ li, ul {
   gap: 3rem;
   -ms-grid-columns: 1fr clamp(225px, 25vw, 275px);
       grid-template-columns: 1fr clamp(225px, 25vw, 275px);
-  margin-block: clamp(3rem, 7.5vw, 5rem);
+  margin-bottom: clamp(3rem, 7.5vw, 5rem);
+  margin-top: clamp(6rem, 7.5vw, 9rem);
 }
 
 @media screen and (min-width: 650px) {
@@ -728,9 +782,28 @@ li, ul {
   max-width: 700px;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-block: 1.5rem;
+  background-color: rgba(0, 49, 65, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding-inline: 1.25rem;
+}
+
 .button {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.button {
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 @media screen and (max-width: 650px) {
@@ -776,17 +849,19 @@ li, ul {
   height: 2rem;
   width: 2rem;
   margin-block: auto;
-  -webkit-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  z-index: 3;
+  right: 1.25rem;
+  top: 1.5rem;
+  position: fixed;
 }
 
 .hamburger.active {
-  z-index: 2;
   background-image: url("/images/close.svg");
 }
 
 .modal-overlay {
-  z-index: 1;
   position: fixed;
   width: 100vw;
   height: 100%;
@@ -800,12 +875,70 @@ li, ul {
   display: flex;
   padding-inline: 1.6rem;
   overflow-y: auto;
+  -webkit-animation: fadeIn 0.2s ease-in-out;
+          animation: fadeIn 0.2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.modal-overlay.fade-out {
+  -webkit-animation: fadeOut 0.2s ease-in-out;
+          animation: fadeOut 0.2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .modal-side {
-  width: 66vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: clamp(1px, 66vw, 20rem);
   margin-left: calc(50% - 50vw);
-  background-color: #F3F3F3;
+}
+
+.menu-modal {
+  z-index: 2;
+  height: 100vh;
+  -webkit-animation: slideIn 0.2s ease-in-out;
+          animation: slideIn 0.2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu-modal.slide-out {
+  -webkit-animation: slideOut 0.2s ease-in-out;
+          animation: slideOut 0.2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu-modal a {
+  color: #003141;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.menu-modal a:not(.pad-0) {
+  padding: 1.5rem;
+  padding-left: 0;
+}
+
+.menu-modal button {
+  width: 100%;
+  padding-block: 0.8rem;
+  -webkit-box-shadow: 0 4px 0 0 #005874;
+          box-shadow: 0 4px 0 0 #005874;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.contact-form button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-box-shadow: 0 1px 0 0 #005874;
+          box-shadow: 0 1px 0 0 #005874;
 }
 
 .max-width-1100 {
@@ -863,6 +996,86 @@ li, ul {
   width: 1px;
 }
 
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -881,5 +1094,6 @@ p {
 
 a, button {
   cursor: pointer;
+  text-decoration: none;
 }
 /*# sourceMappingURL=global.css.map */

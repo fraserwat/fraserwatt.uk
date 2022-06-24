@@ -8,6 +8,7 @@ $breakpoint: 650px;
 @import "blocks/biog-contact";
 @import "blocks/contact-form";
 @import "blocks/greeting";
+@import "blocks/header";
 @import "blocks/button";
 @import "blocks/profile-pic";
 @import "blocks/fraser";
@@ -15,6 +16,7 @@ $breakpoint: 650px;
 @import "blocks/hamburger";
 @import "blocks/modal-overlay";
 @import "blocks/modal-side";
+@import "blocks/menu-modal";
 
 // UTILITIES
 @import "utilities/max-width";
@@ -24,6 +26,12 @@ $breakpoint: 650px;
 @import "utilities/mobile";
 @import "utilities/shadow";
 @import "utilities/sr-only";
+
+// KEYFRAMES
+@import "keyframes/fade";
+@import "keyframes/slide";
+
+// FONTS
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:500,700);
 
@@ -45,4 +53,5 @@ p {
 
 a, button {
     cursor: pointer;
+    text-decoration: none;
 }

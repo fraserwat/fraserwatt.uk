@@ -1,5 +1,6 @@
+$fade-speed: .2s;
+
 .modal-overlay {
-    z-index: 1;
     position:fixed;
     width: 100vw;
     height: 100%;
@@ -10,4 +11,11 @@
     display: flex;
     padding-inline: get-size('600');
     overflow-y:auto;
+    animation: fadeIn $fade-speed ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.modal-overlay.fade-out {
+    animation: fadeOut $fade-speed ease-in-out;
+    animation-fill-mode: forwards;
 }

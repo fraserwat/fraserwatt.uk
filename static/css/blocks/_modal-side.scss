@@ -1,6 +1,8 @@
 .modal-side {
-    // margin-left: auto;
-    width: 66vw;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: clamp(1px, 66vw, 20rem);
     margin-left: calc(50% - 50vw);
-    background-color: get-color('off-white');
 }
