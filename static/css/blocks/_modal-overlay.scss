@@ -7,10 +7,11 @@ $fade-speed: .2s;
     flex-shrink: 0;
     top: 0;
     left: 0;
-    background-color: rgba($color: #000000, $alpha: 0.5);
     display: flex;
     padding-inline: get-size('600');
     overflow-y:auto;
+}
+.modal-overlay.fade-in {
     animation: fadeIn $fade-speed ease-in-out;
     animation-fill-mode: forwards;
 }

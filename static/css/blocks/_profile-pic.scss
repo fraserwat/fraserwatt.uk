@@ -11,6 +11,7 @@
     border: 8px solid get-color('blue');
     height: auto;
     margin: auto;
+    z-index: -1; // so it isn't missed by header blur
 }
     .profile-pic {
         transform: scaleX(-1);

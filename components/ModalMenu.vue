@@ -10,7 +10,7 @@
             </li>
         </ul>
     </nav>
-    <div class="[ modal-overlay ] [ mobile-on ]"></div>
+    <div :class="`[ modal-overlay ] [ mobile-on ${modals.menuModal ? 'fade-in' : ''} ]`"></div>
   </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
         ...mapActions(['changeModalState', 'saveActiveOverlay', 'saveActiveModal']),
         toggleHamburgerMenu() {
             // We're running on the assumption any toggle while modal is open closes it
+            this.activeOverlay.classList.remove('fade-in');
             this.activeOverlay.classList.add('fade-out');
             this.activeModal.classList.add('slide-out');
             this.hamburger.classList.remove('active');

@@ -23,14 +23,7 @@
             <h2 class="sr-only">My Availability</h2>
             <p>I am taking Data & Analytics contracts for <b>Q3 2022</b>, and web development work on an adhoc basis.</p>
           </aside>
-          <form id="contact" action="" class="[ contact-form ] [ bg-white color-navy flow rad-10 box-flex shadow ]">
-            <h2 class="sr-only">Contact</h2>
-            <input id="form-name" type="text" name="name" placeholder="Your Name">
-            <input id="form-email" type="email" name="email" placeholder="Email Address">
-            <textarea id="form-message" name="message" placeholder="Your message here"></textarea>
-            <p>Please include details on your project, what services you require, and any rough timeframes or budgetary information.</p>
-            <button type="submit" class="[ button ] [ bg-blue color-white ]">Contact me</button>
-          </form>
+          <contact-form />
         </div>
       </section>
     </main>
@@ -39,11 +32,12 @@
 </template>
 
 <script>
+import ContactForm from '~/components/ContactForm.vue'
 import MenuHeader from '~/components/MenuHeader.vue'
 import ModalMenu from '~/components/ModalMenu.vue'
 
 export default {
   name: 'IndexPage',
-  components: { MenuHeader, ModalMenu },
+  components: { MenuHeader, ModalMenu, ContactForm },
 }
 </script>
