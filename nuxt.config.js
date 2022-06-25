@@ -8,7 +8,15 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { 
+        hid: 'description',
+        name: 'description',
+        content: "I'm taking Data & Analytics contracts for Q3 2022, and web development work on an adhoc basis." +
+          "I’ve worked in Data & Analyics for eight years, and as a self-employed contractor since the first half of 2021." +
+          "Using a data-driven approach to enable growth across end-to-end analytics pipelines, I work where the project requires — from ETL and analytics engineering, to visualisation and commercial insights." +
+          "I’ve had success doing this in both a B2B and B2C context at companies as varied as Paddle, Facebook, and Otrium." +
+          "I also write about the intersection of technology and politics, and have been featured in Tribune and Jacobin magazines."
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
