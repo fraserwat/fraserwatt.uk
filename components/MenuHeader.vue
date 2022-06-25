@@ -13,7 +13,7 @@
                 </ul>
             </nav>
         </header>
-        <button id="hamburger" :class="`[ hamburger ] [ ${modals.menuModal ? 'active' : ''} ] [ mobile-on bg-off-white ]`" @click="toggleHamburgerMenu"></button>
+        <button id="hamburger" aria-label="Navigation Menu" :class="`[ hamburger ] [ ${modals.menuModal ? 'active' : ''} ] [ mobile-on bg-off-white ]`" @click="toggleHamburgerMenu"></button>
     </div>
 </template>
 

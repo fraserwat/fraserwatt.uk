@@ -5,7 +5,7 @@
             <li><a href="#" @click="toggleHamburgerMenu">Home</a></li>
             <li><a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
             <li><a href="">Blog</a></li>
-            <li><a href="#contact" class="pad-0 box-flex" @click="toggleHamburgerMenu">
+            <li><a href="#contact" class="pad-0 box-flex" aria-label="Contact" @click="toggleHamburgerMenu">
                 <button class="[ button ] [ bg-blue color-off-white gap-top-300 ]">Contact</button></a>
             </li>
         </ul>
