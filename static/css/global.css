@@ -792,14 +792,17 @@ li, ul {
 
 .header {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  margin-inline: auto;
   padding-block: 1.25rem;
   background-color: rgba(0, 49, 65, 0.8);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   padding-inline: 1.25rem;
+  width: 100%;
+  max-width: calc(1100px + 2.5rem);
 }
 
 .button {
@@ -829,7 +832,7 @@ li, ul {
 
 .profile-pic {
   border: 8px solid #007EA7;
-  height: auto;
+  height: 100%;
   margin: auto;
   z-index: -1;
 }

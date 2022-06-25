@@ -9,7 +9,7 @@
 }
 .profile-pic {
     border: 8px solid get-color('blue');
-    height: auto;
+    height: 100%;
     margin: auto;
     z-index: -1; // so it isn't missed by header blur
 }

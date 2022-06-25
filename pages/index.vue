@@ -4,10 +4,15 @@
     <main class="pad-bottom-900" >
       <section class="[ greeting ] [ ]">
         <h1 class="color-white">
-          Hi, I'm Fraser! I build websites, use data to grow organisations, and write about technology.
+          Hi, I'm Fraser! I use data to grow organisations, write about technology, and build websites.
         </h1>
         <div class="profile-pic-container ] [  ]">
-          <img class="[ profile-pic ] [ rad-max ]" src="/images/fraser-watt.png" alt="Fraser Watt">
+          <img
+            class="[ profile-pic ] [ rad-max ]" 
+            srcset="/images/fraser-watt.webp 2x" 
+            src="/images/fraser-watt.png"
+            alt="Fraser Watt" 
+          />
         </div>
       </section>
       <section class="[ biog-contact ] [ ]">
