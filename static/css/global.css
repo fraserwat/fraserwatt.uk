@@ -847,9 +847,13 @@ li, ul {
   letter-spacing: -2px;
 }
 
-.maintext {
-  font-size: clamp(1rem, 2vw, 18px);
+article.maintext {
   line-height: clamp(1.5rem, 2.8vw, 30px);
+  padding: 1.25rem 1.5rem;
+}
+
+.maintext > p:first-of-type {
+  margin-top: 0;
 }
 
 .hamburger {

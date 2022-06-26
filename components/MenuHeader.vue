@@ -1,15 +1,19 @@
 <template>
     <div ref="header" class="header-container">
         <header class="[ header ] [ box-flex space-between ]">
-            <a href="#page-start" class="mobile-off">
-                <h2 class="[ fraser ] [ color-white text-600 ]">Fraser Watt</h2>
-            </a>
-            <h2 class="[ fraser ] [ mobile-on color-white text-600 ]">FW</h2>
+            <NuxtLink to="/">
+                <h2 class="[ fraser ] [ mobile-off color-white text-600 ]">Fraser Watt</h2>
+                <h2 class="[ fraser ] [ mobile-on color-white text-600 ]">FW</h2>
+            </NuxtLink>
             <nav class="[ menu ] [ mobile-off ]">
                 <ul class="box-flex">
-                    <li><a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="#contact"><button class="button">Contact</button></a></li>
+                    <li><a href="https://www.linkedin.com/in/fraser-watt">Data</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li>
+                        <NuxtLink to="/#contact">
+                            <button class="button">Contact</button>
+                        </NuxtLink>
+                    </li>
                 </ul>
             </nav>
         </header>

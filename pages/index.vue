@@ -22,6 +22,8 @@
           <p>Using a data-driven approach to enable growth across end-to-end analytics pipelines, I work where the project requires — from ETL and analytics engineering, to visualisation and commercial insights. I’ve had success doing this in both a B2B and B2C context at companies as varied as <b>Paddle</b>, <b>Facebook</b>, and <b>Otrium</b>.</p>
           <p>I also write about the intersection of technology and politics, and have been featured in <b>Tribune</b> and <b>Jacobin</b> magazines.</p>
           <p>From time to time I'm also available for front-end web development, where my focus is on accessible, lightweight and browser-agnostic implementation of your design.</p>
+          <p class="mobile-on">Get in touch using the form below, I’d love to hear about what you’re working on and how I could help!</p>
+          <p class="mobile-off">Get in touch using the form to the right, I’d love to hear about what you’re working on and how I could help!</p>
         </article>
         <div class="[ biog-contact__sub-box ] [ box-flex ]">
           <aside class="[ ] [ bg-blue color-white rad-10 shadow ]">

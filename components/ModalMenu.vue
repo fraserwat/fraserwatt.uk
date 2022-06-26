@@ -2,11 +2,15 @@
   <div ref="modalMenu" class="modal-container">
     <nav class="[ modal-side ] [ menu-modal ] [ rad-8 bg-off-white ]">
         <ul>
-            <li><a href="#" @click="toggleHamburgerMenu">Home</a></li>
-            <li><a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="#contact" class="pad-0 box-flex" aria-label="Contact" @click="toggleHamburgerMenu">
-                <button class="[ button ] [ bg-blue color-off-white gap-top-300 ]">Contact</button></a>
+            <li @click="toggleHamburgerMenu">
+              <NuxtLink to="/">Home</NuxtLink></li>
+            <li>
+              <a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
+            <li @click="toggleHamburgerMenu">
+              <NuxtLink to="/blog">Blog</NuxtLink></li>
+            <li @click="toggleHamburgerMenu">
+              <NuxtLink to="/#contact" class="pad-0 box-flex" aria-label="Contact">
+                <button class="[ button ] [ bg-blue color-off-white gap-top-300 ]">Contact</button></NuxtLink>
             </li>
         </ul>
     </nav>
@@ -23,6 +27,7 @@ export default {
         ...mapState(['modals', 'hamburger', 'activeOverlay', 'activeModal']),
     },
     mounted() {
+        this.changeModalState({modalName: 'menuModal', newState: false});
         this.saveActiveOverlay(this.$refs.modalMenu.querySelector('.modal-overlay'));
         this.saveActiveModal(this.$refs.modalMenu.querySelector('.menu-modal'));
     },
@@ -37,7 +42,7 @@ export default {
             setTimeout( () => {
                 this.activeOverlay.classList.remove('fade-out');
                 this.activeModal.classList.remove('slide-out');
-                this.changeModalState({modalName: 'menuModal', newState: !this.modals.menuModal});
+                this.changeModalState({modalName: 'menuModal', newState: false});
             }, 200)
         }
     },
@@ -60,5 +65,10 @@ export default {
   li + li {
     padding-top: 1.5rem;
     border-top: solid 1px rgba(97, 97, 97, 10%);
+  }
+  @media screen and (min-width: 650px) {
+    .modal-container {
+      display: none;
+    }
   }
 </style>
