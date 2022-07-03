@@ -1,0 +1,7 @@
+@mixin top-element {
+    margin-top: clamp(6rem, 7.5vw, 9rem);
+}
+
+.top-element {
+    @include top-element();
+}

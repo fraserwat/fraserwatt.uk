@@ -4,7 +4,7 @@
     gap: 3rem;
     grid-template-columns: 1fr clamp(225px, 25vw, 275px);
     margin-bottom: clamp(3rem, 7.5vw, 5rem);
-    margin-top: clamp(6rem, 7.5vw, 9rem);
+    @include top-element;
 }
 @media screen and (min-width: $breakpoint) {
     .greeting {
@@ -13,8 +13,5 @@
 }
 .greeting h1 {
     margin-block: auto;
-    font-size: clamp(30px, 4.6vw, 3.2rem);
-    line-height: clamp(40px, 5.75vw, 65px);
-    font-weight: 700;
     max-width: 700px;
 }

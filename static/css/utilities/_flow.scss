@@ -4,4 +4,6 @@
 .flow-900 > * + * {
     margin-top: 1rem;
 }
-  
+.flow-half > * + * {
+    margin-top: 0.512rem;
+}

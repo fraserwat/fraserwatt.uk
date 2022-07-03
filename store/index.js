@@ -35,7 +35,8 @@ export const actions = ({
                 subhead: post.exerpt,
                 content: post.content.rendered,
                 slug: post.slug,
-                createdAt: post.date_gmt
+                createdAt: post.date_gmt,
+                external: false
             }
         });
         commit('appendArticleContent', posts)
@@ -50,14 +51,16 @@ export const actions = ({
                 subhead: "El Salvador became the first country in the world to adopt cryptocurrency as legal tender, pledging to build a ‘Bitcoin City’ on a volcano – but the recent crash has exposed the consequences of hitching a country’s economy to crypto delusions.",
                 content: undefined,
                 slug: "https://tribunemag.co.uk/2022/05/el-salvador-crypto-bitcoin",
-                createdAt: new Date('30 May 2022')
+                createdAt: new Date('30 May 2022'),
+                external: "Tribune Magazine"
             },
             {
                 title: "Crypto Can't Build a Better Internet",
                 subhead: "For all its utopian trappings, web3 tech like cryptocurrency only deepens the problem of elite control over the internet. We have an alternative.",
                 content: undefined,
                 slug: "https://jacobin.com/2022/06/crypto-cant-build-a-better-internet",
-                createdAt: new Date('6 June 2022')
+                createdAt: new Date('6 June 2022'),
+                external: "Jacobin"
             },
         ]
         commit('appendArticleContent', articles)

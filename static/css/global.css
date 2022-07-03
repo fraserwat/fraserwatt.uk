@@ -667,6 +667,10 @@ li, ul {
 }
 
 /* GORKO: auto-generated utility classes end */
+.top-element {
+  margin-top: clamp(6rem, 7.5vw, 9rem);
+}
+
 .biog-contact {
   display: -ms-grid;
   display: grid;
@@ -784,9 +788,6 @@ li, ul {
 
 .greeting h1 {
   margin-block: auto;
-  font-size: clamp(30px, 4.6vw, 3.2rem);
-  line-height: clamp(40px, 5.75vw, 65px);
-  font-weight: 700;
   max-width: 700px;
 }
 
@@ -980,6 +981,10 @@ article.maintext {
   margin-top: 1rem;
 }
 
+.flow-half > * + * {
+  margin-top: 0.512rem;
+}
+
 .space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1108,6 +1113,12 @@ body {
   background: linear-gradient(#003141, #333636);
   background-attachment: fixed;
   padding: 1.25rem;
+}
+
+h1 {
+  font-size: clamp(30px, 4.6vw, 3.2rem);
+  line-height: clamp(40px, 5.75vw, 65px);
+  font-weight: 700;
 }
 
 p {

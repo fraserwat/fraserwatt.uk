@@ -8,7 +8,7 @@
             <nav class="[ menu ] [ mobile-off ]">
                 <ul class="box-flex">
                     <li><a href="https://www.linkedin.com/in/fraser-watt">Data</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/writing">Writing</a></li>
                     <li>
                         <NuxtLink to="/#contact">
                             <button class="button">Contact</button>

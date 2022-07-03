@@ -7,7 +7,7 @@
             <li>
               <a href="https://www.linkedin.com/in/fraser-watt/">Data</a></li>
             <li @click="toggleHamburgerMenu">
-              <NuxtLink to="/blog">Blog</NuxtLink></li>
+              <NuxtLink to="/writing">Writing</NuxtLink></li>
             <li @click="toggleHamburgerMenu">
               <NuxtLink to="/#contact" class="pad-0 box-flex" aria-label="Contact">
                 <button class="[ button ] [ bg-blue color-off-white gap-top-300 ]">Contact</button></NuxtLink>
