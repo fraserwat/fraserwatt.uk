@@ -14,7 +14,7 @@
             </li>
         </ul>
     </nav>
-    <div :class="`[ modal-overlay ] [ mobile-on ${modals.menuModal ? 'fade-in' : ''} ]`"></div>
+    <div :class="`[ modal-overlay ] [ bg-navy-faded mobile-on ${modals.menuModal ? 'fade-in' : ''} ]`"></div>
   </div>
 </template>
 

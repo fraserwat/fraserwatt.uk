@@ -62,6 +62,14 @@ export const actions = ({
                 createdAt: new Date('6 June 2022'),
                 external: "Jacobin"
             },
+            {
+                title: "The Corporate Internet Isn’t the Only Option",
+                subhead: "When it comes to internet infrastructure, the for-profit model is presented as inevitable – but political decisions built today's internet, and political movements could build something different.",
+                content: undefined,
+                slug: "https://tribunemag.co.uk/2022/07/internet-for-the-people-book-review",
+                createdAt: new Date('17 July 2022'),
+                external: "Tribune Magazine"
+            },
         ]
         commit('appendArticleContent', articles)
     }

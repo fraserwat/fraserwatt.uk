@@ -10,7 +10,9 @@
           </h2>
           <div class="date-ext-container box-flex">
             <p class="color-blue">{{ new Date(post.createdAt).toLocaleDateString("en-UK") }}</p>
-            <a :href="post.slug" v-if="post.external !== false" class="gap-left-300 pad-left-300 pad-right-300 color-off-white bg-blue rad-10">{{ post.external }}</a>
+            <a v-if="post.external !== false" :href="post.slug" class="gap-left-300 pad-left-300 pad-right-300 color-off-white bg-blue rad-10">
+              {{ post.external }}
+            </a>
           </div>
           <p>
             <a :href="post.slug" class="color-navy">{{ post.subhead || getFirstParagraph(post.content) }}</a>
